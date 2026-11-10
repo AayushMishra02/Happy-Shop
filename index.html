@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY Shop</title>
+<style>
+    .logo-container 
+    {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+  .logo-container img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+}
+
+.logo-container span {
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: black;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    width: 430px;
+    height: 43px;
+}
+
+.search-bar select {
+    width: 145px;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    border-right: 1px solid #ddd;
+    outline: none;
+    background: #f5f7f5;
+    cursor: pointer;
+}
+
+.search-bar input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-bar button {
+    height: 100%;
+    padding: 0 17px;
+    background: #16834a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.search-bar button:hover {
+    background: #105b34;
+}
+ .user-login
+   {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.user-login a
+ {
+    text-decoration: none;
+    color: white;
+    background-color: green;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.user-login a:hover 
+{
+    background-color: darkgreen;
+}
+.full-width-img 
+  {
+    width: 100%;
+    height: 400px;
+    display: screen;
+  }
+   .text 
+   {
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    color: rgb(250, 252, 246);
+    font-size: 35px;
+    font-weight: bold;
+   }
+   .right {
+    position: absolute;
+    left: 870px;
+    top: 100px;
+    width: 300px;
+    font-size: 24px;
+    color: purple;
+    font-weight: bold;
+}
+.hero {
+    width: 100%;
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: 500px;
+    display: block;
+}
+
+.left-text {
+    position: absolute;
+    top: 18%;
+    left: 4%;
+    width: 25%;
+}
+
+.left-text h1 {
+    color: white;
+    font-size: clamp(20px, 2.7vw, 45px);
+}
+
+.left-text h1 span {
+    color: purple;
+}
+
+.left-text p {
+    color: yellow;
+    font-size: clamp(11px, 1.2vw, 20px);
+}
+
+.order-btn {
+    width: 50%;
+    margin-top: 15px;
+}
+
+.right-text {
+    position: absolute;
+    top: 45%;
+    right: 3%;
+    width: 26%;
+}
+
+.right-text h2 {
+    color: purple;
+    font-size: clamp(16px, 2vw, 30px);
+}
+@media (max-width: 600px) {
+
+    .hero-image {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .left-text {
+        top: 10%;
+        left: 3%;
+        width: 38%;
+    }
+
+    .left-text h1 {
+        font-size: 15px;
+    }
+
+    .left-text p {
+        font-size: 9px;
+    }
+
+    .right-text {
+        top: 45%;
+        right: 3%;
+        width: 40%;
+    }
+
+    .right-text h2 {
+        font-size: 12px;
+    }
+
+    .order-btn {
+        width: 80px;
+    }
+}
+.categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: px;
+    line-height: 0.1em;
+}
+
+.category {
+    text-align: center;
+   
+}
+
+.category img {
+    object-fit: contain;
+}
+.tee{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: xx-small;
+}
+.ay{
+    line-height: .1em;
+    text-align: center;
+    width:200px;
+    border: 1px solid;
+    border-radius: 19px;
+   
+}
+
+.ay img{
+    height: 150px;
+    width:150px;
+    object-fit: contain;
+}
+.ay button {
+    background-color: green;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.products{
+     display:flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     gap:5px;
+     justify-content: center;
+     
+}
+#ve{
+   color: rgb(48, 122, 25);
+}
+#st{
+   color: rgb(55, 54, 138);
+}
+#fr{
+   color: rgb(129, 19, 24);
+}
+#ra{
+   color: rgb(21, 97, 124);
+   
+}
+    </style>
+
+
+    
+</head>
+<body>
+    
+    <header>
+
+         <div class="logo-container">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJcgFnNHfMl1Zr5d8k-3ys3PYsaaN8vfdALOsYt5IzNw&s=10" alt="logo">
+             <span>HAPPY SHOP</span>
+            </div>
+    </header>
+<div class="user-login" id="userSection">
+    <a href="#login">👤 Login </a>
+</div>
+   <center>
+    
+
+    
+<form class="search-bar" action="search.html" method="GET">
+
+        <select name="category">
+            <option value="all">Select Category</option>
+            <option value="vegetables"><a href="#ve">Vegetables</a> </option>
+            <option value="fruits"><a href="#ra">Fruits</a></option>
+            <option value="stationery"><a href="#ra">Stationery</a></option>
+            <option value="sports"><a href="#ra">Sports Equipment</a></option>
+            <option value="essentials"><a href="#ra">Daily Essentials</a></option>
+            
+        </select>
+
+        <input
+            type="search"
+            name="q"
+            placeholder="Search Products..."
+        >
+
+        <button type="submit">🔍</button>
+
+    </form></center>
+<marquee height="35px" bgcolor="green"><span style="font-size: 35px; font-weight: bold;">FREE Delivery & 40% Discount For Next 3 Orders!Place Your 1ˢᵗ Orders </span></marquee>
+<center>    <nav>
+        <a href="index.html"> <font size="5">🏠Home </font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#ve"><font size="5">🛍️Shop</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="sale"><font size="5">🏷️Sale</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#contact"><font size="5">📞Contact</font></a></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#cart"><font size="5">🛒My Cart </font></a>
+        
+        
+    </nav></center>
+    <div class="image">
+        <div class="hero">
+
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/072/265/212/small/wire-shopping-basket-filled-with-groceries-on-green-background-photo.jpeg" class="hero-image">
+
+    <div class="left-text">
+        <h1>
+            FRESH Products<br>
+            <span>Delivered</span> At Your<br>
+            Doorsteps
+        </h1>
+
+        <p>Wide range of fresh products,<br>
+        everyday essentials and more...</p>
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNbctbfI_0NDSOyadZMZW6_WwrO7kp1k5SXRWQj8Wp3A&s=10" class="order-btn">
+    </div>
+
+    <div class="right-text">
+        <h2>
+            Get farm-fresh goodness & a
+            range of exotic fruits,
+            vegetables, daily essentials
+            and many more...
+        </h2>
+    </div>
+
+</div>
+
+    <br><center>
+
+        <p style="font-size: 25px; font-weight: bold;">Shop By Category <span class="tee">(click to see products)</span> </p>
+    </center>
+    <div class="categories" >
+       <div class="category">
+
+           <a href="#ve"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdI5WCe9F0Jua8u27yEkgeMpXbK7rUI0dhUBLZxcCvjw&s=10"height="140px" width="198px"></a>&nbsp;&nbsp;
+           <h3>Vegetables</h3>
+        </div>
+        <div class="category">
+
+            <a href="#st"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaAJDIol2DBKKQUm8tFVDIeCWkAD22BvrIFByzfjE5IQ&s=10"height="140px" width="198px"></a>&nbsp;&nbsp;
+            <h3>Stationery</h3>
+        </div>
+        <div class="category">
+
+            <a href="#fr"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDXIS0p4nFiyvTfb8e-BSVF7LpIVpHrTP-wyZKbCBrzA&s=10"height="140px" width="198px"></a>&nbsp;&nbsp;
+            <h3>Fruits</h3>
+        </div> 
+        <div class="category">
+
+            <a href="#ra"><img src="https://mommybunch.com/wp-content/uploads/2015/12/December-OTH-Key-Visual_Product-Grouping.png"height="160px" width="198px"></a>&nbsp;&nbsp;
+            <h3>Daily Essentials</h3>
+        </div>
+        <div class="category">
+
+            <a href="#sp"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKcRQTOVQfyNZz_Y4JdqYxOVKSOmhM1LH9gmaQ7FkAQA&s=10"height="160px" width="198px"></a>&nbsp;&nbsp;
+            <h3>Sports</h3>
+        </div>
+       
+    </div>
+
+
+
+
+<div>
+ <div class="main-content" id="ve">
+     
+    
+        <p style="font-size: 30px; font-weight: bold;">Available VEGETABLES:</p>
+        <div class="products">
+            <div class="ay">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh7145lNb2qocYYEuDGzed-r3As7cfRZg0k2QAOwV5wA&s=10.jpg">
+                <h3>Tomato</h3>
+                <p >₹77/Kg</p>
+                <button onclick="addToCart('Tomato', 30)">
+                Add to Cart
+        </button>
+    </div>                 
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI0pVme6fnWEDb3DE4eu1vH1iMMMgyr-e7coDi4cwh6w&s=10">
+        <h3>Potato</h3>
+        <p >₹29/Kg</p>
+        <button onclick="addToCart('Potato', 29)">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTixhNS5J1kxhq-GytrqOhZztb-HR-qTMFrr5WLTIuF7A&s=10"  >
+         <h3>Cauliflower</h3>
+         <p >₹49/Kg</p>
+         <button onclick="addToCart('Cauliflower', 49)">
+             Add to Cart
+            </button>
+        </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRcZwHz52EF2Jm8FeBBVxrjruDtH-5b8oogIz494QMuQ&s=10"  >
+        <h3>Brinjal</h3>
+        <p >₹39/Kg</p>
+         <button onclick="addToCart('Brinjal', 39)">
+             Add to Cart
+            </button>
+        </div>
+        <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpdQyAmKkzztVbg3SGvDrt-rtCE2meU8az7JAcVfO36Q&s=10"  >
+        <h3>Carrot</h3>
+        <p >₹69/Kg</p>
+        <button onclick="addToCart('Carrot', 69)">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcq36op5CecDPEFCmIcVvv9kH1pnhMiG1QgsKF-GIOhQ&s=10"  >
+        <h3>Peas</h3>
+        <p >₹79/Kg</p>
+        <button onclick="addToCart('Peas', 79)">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQemF-Fnbnbcg9LO9ZdUxDkgKzsaZ5G3B_wmRa1iz-ahQ&s=10"  >
+         <h3>Cucumber</h3>
+        <p >₹49/Kg</p>
+        <button onclick="addToCart('Cucumber', 49)">
+             Add to Cart
+            </button>
+        </div>
+        <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrqAL9nPnmFAVg22ZKdTcOCB598zZuk7fCaMocs38yNw&s=10"  >
+            <h3>Radish</h3>
+            <p >₹49/Kg</p>
+            <button onclick="addToCart('Radish', 49)">
+                Add to Cart
+            </button>
+        </div>
+        <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtdqyGltrYw-z6n4Wx1iIuVh8BPDveWsYx2qj66ITRwA&s=10https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtdqyGltrYw-z6n4Wx1iIuVh8BPDveWsYx2qj66ITRwA&s=10"  >
+            <h3>Spinach</h3>
+            <p >₹14/bundle</p>
+            <button onclick="addToCart('Spinach',14 )">
+                Add to Cart
+            </button>
+        </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZCnb_Qxnm6WxhlHvGhHOeca2bpe2r5GzqfG1CqekfBA&s=10"  >
+        <h3>Onion</h3>
+        <p >₹39/Kg</p>
+        <button onclick="addToCart('Onion', 39)">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmTS4TmYSYAaXS50RDx4nWN0AdjmMpWbqaWHOGqtvlsg&s=10"  >
+        <h3>Broccoli</h3>
+        <p >₹79/Kg</p>
+        <button onclick="addToCart('Broccoli',79 )">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX6NfC9pIMA3WP2Oh38VigC31oBLuG92jG-jItTeelRw&s=10"  >
+        <h3>Capsicum</h3>
+        <p >₹69/Kg</p>
+         <button onclick="addToCart('Capsicum',69 )">
+             Add to Cart
+            </button>
+        </div>
+        <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5Grf4f5MFS0o6Q0l0zUvMv_L9kF-RFSqAKSKuPV5M1g&s=10"  >
+            <h3>Corn</h3>
+            <p >₹7/pc</p>
+            <button onclick="addToCart('Corn', 7)">
+                Add to Cart
+        </button>
+    </div>
+    
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuSdFh-IHw6Q8iUtOUBYYkGyMo33w2e6ZkhXr1duBCmA&s=10"  >
+        <h3>Cabbage</h3>
+        <p >₹39/Kg</p>
+        <button onclick="addToCart('Cabbage',39 )">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgKTi7GhQNQBJLJ2lVkqoPPO0iEnvg1igZvbugEqMRKw&s=10"  >
+            <h3>Mushroom</h3>
+            <p >₹79/pack</p>
+            <button onclick="addToCart('Mushroom',79 )">
+                Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7r_GOGUQ7oj5C1b85ZHD89iXuxjxdUr5P4EWBGthSpg&s=10"  >
+            <h3>Avocado</h3>
+            <p >₹99/pc</p>
+            <button onclick="addToCart('Avocado',99 )">
+                Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmnlqGc2qHN_oGZhSDtnzJxNNOYeLZ3iA9oo4DSG2SVA&s=10"  >
+            <h3>Ginger</h3>
+            <p >₹5/pc</p>
+            <button onclick="addToCart('Ginger',5 )">
+                Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqAZUs8DYF9YpYkwdRtYH4UfftV_vllh2KL_cCLW9aHQ&s=10"  >
+            <h3>Garlic</h3>
+            <p >₹7/pc</p>
+            <button onclick="addToCart('Garlic', 7)">
+                Add to Cart
+        </button>
+    </div>
+</div>
+
+
+</div>
+
+<div class="main-content" id="st">
+     
+    
+        <p style="font-size: 30px; font-weight: bold;">Available Stationery Products:</p>
+        <div class="products">
+            <div class="ay">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr4Hx_NL0RnX-CcKFmAUr9S4_kUy4nNfJwfwtxnsno5A&s=10" >
+                <h3>Pencils</h3>
+                <p >₹60/pack</p>
+                <button onclick="addToCart('Pencils', 60)">
+                Add to Cart
+        </button>
+    </div>                 
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0xiABfmrIZz2ZxMpFdawlKwaao6SV31ym_TmDJh_HzQ&s=10">
+        <h3>Erasers</h3>
+        <p >₹5/piece</p>
+        <button onclick="addToCart('Erasers', 5)">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXxgj0GAhqZUr0QeEbY25jakINCpoXPGxWKLrjZQ2rCA&s=10"  >
+         <h3>Sharpener</h3>
+         <p >₹5/piece</p>
+         <button onclick="addToCart('Sharpener',5 )">
+             Add to Cart
+            </button>
+        </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHMvCk8yci28XKD_MM6x1E6Ef_F5dTworvze7bjtIBlg&s=10"  >
+        <h3>Pen</h3>
+        <p >₹10/pc</p>
+         <button onclick="addToCart('Pen', 10)">
+             Add to Cart
+            </button>
+        </div>
+        <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcubWcXcGVAh6s9JihMIuKvMd2trge1tsqxcIPjFpBdw&s=10"  >
+        <h3>Colour Pencil</h3>
+        <p >₹99/pack</p>
+        <button onclick="addToCart('Colour Pencil', 99)">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-ys-7Ku-RUttKCNh1G2prjzhSz1f2G7ZLLoXj7MfzCw&s=10"  >
+        <h3>Exam Pad</h3>
+        <p >₹99/2pc</p>
+        <button onclick="addToCart('Exam Pad', 99)">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHOMAfylI6p1VWQSahZsif1wp2qDbFr8_jW-prZB5LJw&s=10"  >
+         <h3>Notebook</h3>
+        <p >₹49/pc</p>
+        <button onclick="addToCart('Notebook',49 )">
+             Add to Cart
+            </button>
+        </div>
+        <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-pJ_EthGpmEntPgNODPIxNnSjq3QRaQzlCx-lTI3mBA&s=10"  >
+            <h3>ColourBook</h3>
+            <p >₹79/pc</p>
+            <button onclick="addToCart('ColourBook',79 )">
+                Add to Cart
+            </button>
+        </div>
+        <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXLoLqlox7F9aXZG4ejKWADSe3NUYepmMduCjbx3iuTQ&s=10"  >
+            <h3>Scale</h3>
+            <p >₹5/pc</p>
+            <button onclick="addToCart('Scale',5 )">
+                Add to Cart
+            </button>
+        </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr74tWP6BcxFjiWAo2N98Wh-hOY2m3kIZGPTsnIJs-wQ&s=10"  >
+        <h3>Geometry Box</h3>
+        <p >₹129/pc</p>
+        <button onclick="addToCart('Geometry Box',129)">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHwwFtCrmTyZbTMYJx52WLvP_UTCZ7S-NX1-jhyv48Og&s=10"  >
+        <h3>File</h3>
+        <p >₹19/pc</p>
+        <button onclick="addToCart('File',19 )">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlvfnX76sE1oH2V20m5rFPryrAkTilmOGaBPh0gkLq2A&s=10"  >
+        <h3>Origami</h3>
+        <p >₹39/pack</p>
+         <button onclick="addToCart('Origami',39 )">
+             Add to Cart
+            </button>
+        </div>
+        <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGpkW_KoagSIichrVKnANZdShJVEBadMLkLa4O2jgCiQ&s"  >
+            <h3>Marker</h3>
+            <p >₹99/pack</p>
+            <button onclick="addToCart('Marker', 99)">
+                Add to Cart
+        </button>
+    </div>
+    
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaDkSTKhcrZoSjx6S7x34O183axV4cDxU4EXjfDCa_2w&s=10"  >
+        <h3>Correction Fluid</h3>
+        <p >₹59/pc</p>
+        <button onclick="addToCart('Correction Fluid', 59)">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrQYam2xhEnzFa-8XcqYRdp2XTK6aYsIATAubLt7iIeA&s=10"  >
+            <h3>Paint </h3>
+            <p >₹109/pc</p>
+            <button onclick="addToCart('Paint',109 )">
+                Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxWmh21FUrtV3ZSOpxBYc7m6jZ8HYabv0LUwRz16L1gQ&s=10"  >
+            <h3>Glue</h3>
+            <p >₹9/pc</p>
+            <button onclick="addToCart('Glue', 9)">
+                Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvLbZ1UiTIuN6Y7iJVuMkK_c8IwEJfF-oUcclfpnKbQ&s=10"  >
+            <h3>Stapler</h3>
+            <p >₹65/pc</p>
+            <button onclick="addToCart('Stapler',65 )">
+                Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHSjvKR_lynjw9DksdkF-xMMC3YY8ScAfIkckGhiNE9Q&s=10"  >
+            <h3>Punching Machine</h3>
+            <p >₹79/pc</p>
+            <button onclick="addToCart('Punching Machine', 79)">
+                Add to Cart
+        </button>
+    </div>
+</div>
+
+
+
+
+<div class="main-content" id="fr">
+     
+    
+        <p style="font-size: 30px; font-weight: bold;">Available Fruits:</p>
+        <div class="products">
+            <div class="ay">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQozQowt6A1AI4jdAuOBwJLeqxj-DAk62ZpL1LUQy-7Eg&s=10" >
+                <h3>Apple</h3>
+                <p >₹120/Kg</p>
+                <button onclick="addToCart('Apple', 120)">
+                Add to Cart
+        </button>
+    </div>                 
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdMyrahTOsazTSxPpjkj1XKCJZszbTLJkDdRfppA600A&s=10">
+        <h3>Banana</h3>
+        <p >₹60/dozen</p>
+        <button onclick="addToCart('Banana',60)">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWIezy-LqXvzVLLJgS6TivUQMtiEPRRxOvt8LlOMds2g&s=10"  >
+         <h3>Watermelon</h3>
+         <p >₹75/Kg</p>
+         <button onclick="addToCart('Watermelon', 75)">
+             Add to Cart
+            </button>
+        </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWaKlAVXJg2r_LqQtgCXGf6cw8qfNXxbdfDNbEQyCFzw&s=10"  >
+        <h3>Papaya</h3>
+        <p >₹55/Kg</p>
+         <button onclick="addToCart('Papaya', 55)">
+             Add to Cart
+            </button>
+        </div>
+        <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZxl3a_vIuCdohxgjG2_ann5CrCdtUL-xoKJOeHCnAjQ&s=10"  >
+        <h3>Pineapple</h3>
+        <p >₹129/Kg</p>
+        <button onclick="addToCart('Pineapple', 129)">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaY1pCnXaBghdUIcbmR_7Yq1fGXNXMjDRDXSuG_ijtxQ&s=10"  >
+        <h3>Custard Apple</h3>
+        <p >₹159/Kg</p>
+        <button onclick="addToCart('Custard Apple',159 )">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFhS_dF-LZNupvTOiTAfkFBOL0VyMUAsW95KLtB8BtQQ&s=10"  >
+         <h3>Dragon Fruit</h3>
+        <p >₹79/pc</p>
+        <button onclick="addToCart('Dragon Fruit',79 )">
+             Add to Cart
+            </button>
+        </div>
+        <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKf9TXUx-L6hDoQBNlXU6dpEyB6oaWbVOpyByiFyKtBg&s=10"  >
+            <h3>Kiwi</h3>
+            <p >₹99/3pc</p>
+            <button onclick="addToCart('Kiwi', 99)">
+                Add to Cart
+            </button>
+        </div>
+        <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9qkGR-PLCSnF8JABG_b4O1gOOWMC4BNwH_DUcQBrIzQ&s=10"  >
+            <h3>Chiku</h3>
+            <p >₹50/kg</p>
+            <button onclick="addToCart('Chiku',50 )">
+                Add to Cart
+            </button>
+        </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQotXCS3X5ooNXIlT_XyC4Eqei3t2lslzb084xoiWtc3g&s=10"  >
+        <h3>Bulberry</h3>
+        <p >₹139/Kg</p>
+        <button onclick="addToCart('Bulberry',139 )">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9THkczEotErjbytx1ddZn4AeDUByNLHkdEIsKikAnbA&s=10"  >
+        <h3>Tangerin</h3>
+        <p >₹59/Kg</p>
+        <button onclick="addToCart('Tangerin',59 )">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBWID8P3LLOoYdpR9qGh-u7PWa01QlGvB-azYn8wev1w&s=10"  >
+        <h3>Grapes</h3>
+        <p >₹69/Kg</p>
+         <button onclick="addToCart('Grapes',69 )">
+             Add to Cart
+            </button>
+        </div>
+        <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1j2DjxvzrkxB7icTTYA7bFklgZjTtlkIRAWnXClOg4Q&s=10"  >
+            <h3>Strawberry</h3>
+            <p >₹79/300gm</p>
+            <button onclick="addToCart('Strawberry',79 )">
+                Add to Cart
+        </button>
+    </div>
+    
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmEs_Owmk32fNcQaubqSwSbpKo5fhQAWwRSS44Tftp1Q&s=10"  >
+        <h3>Rasberry</h3>
+        <p >₹119/300gm</p>
+        <button onclick="addToCart('Rasberry',119 )">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsM7qFZO-Dy8A1jQ03zLRk4mHFXi5s3kFV0RmIc7DFmQ&s=10"  >
+            <h3>Cherry</h3>
+            <p >₹79/500gm</p>
+            <button onclick="addToCart('Cherry', 79)">
+                Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUDpH91uT2lnmgxkKjhEqpRVfSyR4iG5dmzJVCX4DSBA&s=10"  >
+            <h3>Lychee</h3>
+            <p >₹99/300gm</p>
+            <button onclick="addToCart('Lychee',99 )">
+                Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ-Fg-wUmUJM-EqYWUiBJh_YAeI9L-eHXOJxnG2GCsKw&s=10"  >
+            <h3>Guava</h3>
+            <p >₹125/kg</p>
+        <button onclick="addToCart('Guava', 125 )">
+    
+                Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTklf4JfbGvPJPREW_ahz2DhClnJGVx8dQ_QhC29YB1-g&s=10"  >
+            <h3>Jackfruit</h3>
+            <p >₹129/pc</p>
+          <button onclick="addToCart('Jackfruit',129 )">
+                Add to Cart
+        </button>
+    </div>
+</div>
+</div>
+
+
+
+
+
+<div class="main-content" id="ra">
+     
+    
+        <p style="font-size: 30px; font-weight: bold;">Available Daily Essentials:</p>
+        <div class="products">
+            <div class="ay">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6KRu4puLdwAy5K9Nl-9vEpUaKvlwkcuppGOV8gexVBQ&s=10" >
+                <h3>Toothpaste</h3>
+                <p >₹89/pc</p>
+                <button onclick="addToCart('Toothpaste', 89)">
+                Add to Cart
+        </button>
+    </div>                 
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBuuEsW6z1238eYgw2yuQWTOyjwkxbGREEcTp3xflf3Q&s=10">
+        <h3>Toothbrush</h3>
+        <p >₹89/pack of 4</p>
+       <button onclick="addToCart('Toothbrush',89 )">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOtXwXN7pLBQZ1Zdmaacrw50YHX9k_8OUZuBJLPw2aw&s=10"  >
+         <h3>Laundry Detergent</h3>
+         <p >₹75/pc</p>
+        <button onclick="addToCart('Laundry Detergent',75 )">
+             Add to Cart
+            </button>
+        </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKaQq0IgkpB7BnGRu3fRUhrCGeWXi3wuzoNNkTsxa70w&s=10"  >
+        <h3>Soap</h3>
+        <p >₹35/pc</p>
+         <button onclick="addToCart('Soap',35 )">
+             Add to Cart
+            </button>
+        </div>
+        <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeVn2bTDeH0I5vzYI7kqIrdMT0lfA7I0AeKv1VmO40Gg&s=10"  >
+        <h3>Shampoo</h3>
+        <p >₹129/pc</p>
+        <button onclick="addToCart('Shampoo',129 )">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeHwIQ-iR0RcGf2Sxw08ntbaHJJXqsl24I2x1z2-N1cg&s=10"  >
+        <h3>Hand sanitizer</h3>
+        <p >₹59/pc</p>
+        <button onclick="addToCart('Hand sanitizer',59 )">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxHYOIZYP4--H4dsLgwW5ZMbs5RRBwGCD5C78hdfcrTg&s=10"  >
+         <h3>Tissues</h3>
+        <p >₹79/pc</p>
+       <button onclick="addToCart('Tissues',79 )">
+             Add to Cart
+            </button>
+        </div>
+        <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKyyExskJXT6VrTsNUvoQ6VmUn-doSQhZaqua9YDaK_Q&s=10"  >
+            <h3>Lip balm</h3>
+            <p >₹29/pc</p>
+           <button onclick="addToCart('Lip balm',29 )">
+                Add to Cart
+            </button>
+        </div>
+        <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwQLqe2WtMprn9REKKyp_8e-43QGWCq_JZXbpyNsa10g&s=10"  >
+            <h3>Toilet paper</h3>
+            <p >₹70/pc</p>
+           <button onclick="addToCart('Toilet paper', 70)">
+                Add to Cart
+            </button>
+        </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS01i7q6pi98MX8VoY84Vd3zhvX_whOJXVfUUI6T7PDRw&s=10"  >
+        <h3>Coffee</h3>
+        <p >₹239/pac</p>
+       <button onclick="addToCart('Coffee',239 )">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNCi2LMhq9mSNax3mrz_UsobWk6pLB1XZ7AAyWDvjTnw&s=10"  >
+        <h3>Hand Lotion</h3>
+        <p >₹59/pc</p>
+        <button onclick="addToCart('Hand Lotion', 59)">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRWkiJLjuoYThHVX7T8UOBRPGmziBkFRpV6v7HDMaPZg&s=10"  >
+        <h3>Deodrant</h3>
+        <p >₹69/pc</p>
+         <button onclick="addToCart('Deodrant', 69)">
+             Add to Cart
+            </button>
+        </div>
+        <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfggpxPOnqqmdn7tCKxBPJMwIOVuNEyWAtoIYd6XUnkQ&s=10"  >
+            <h3>Cooking Oil</h3>
+        <p >₹129/900ml</p>
+            <button onclick="addToCart('Cooking Oil', 129)">
+                Add to Cart
+        </button>
+    </div>
+    
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdEFYaFKlpyUBnZ08MmydeOSoUiCreGtpSgCLh0qffkw&s=10"  >
+        <h3>Water Bottle</h3>
+        <p >₹109/pc</p>
+       <button onclick="addToCart('Water Bottle', 109)">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9i9esVGs_p7e2YeNQy_s18FJMVr0hPWHLdUzWyx9dfQ&s=10"  >
+            <h3>Hair Oil</h3>
+            <p >₹79/250ml</p>
+            <button onclick="addToCart('Hair Oil', 79)">
+                Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSpQ3ycDyjizXuiPADohUri4INiWdzxUHMctuAZZPy6Q&s=10"  >
+            <h3>Skin Care Kit </h3>
+            <p >₹799/kit</p>
+            <button onclick="addToCart('Skin Care Kit',799 )">
+                Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjJAD_o6cdHJntgRaikrUEzUp3m-fjbis7NcpALyuG6g&s"  >
+            <h3>Trash Bags</h3>
+            <p >₹35/pc</p>
+            <button onclick="addToCart('Trash Bags', 35)">
+                Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqcs8mHIxL0KzJvENPO8DKt3Bl1NgzBrFcxJr4eV2vxQ&s=10"  >
+            <h3>Tea</h3>
+            <p >₹129/pc</p>
+           <button onclick="addToCart('Tea',129 )">
+                Add to Cart
+        </button>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="main-content" id="sp">
+     
+    
+        <p style="font-size: 30px; font-weight: bold;">Available Sports Items:</p>
+        <div class="products">
+            
+    
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMTHBDap5M1B-25t-v4kZAdAQGPdBzzmVm9E5MF5My7A&s=10https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMTHBDap5M1B-25t-v4kZAdAQGPdBzzmVm9E5MF5My7A&s=10"  >
+        <h3>Bat</h3>
+        <p >₹459/pc</p>
+        <button onclick="addToCart('Bat', 459)">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvEsFkw4TKwDLgsAU7UXlTpQJ2PGmmBhwUoYbQ1tax0g&s=10"  >
+         <h3>Ball</h3>
+        <p >₹79/pc</p>
+        <button onclick="addToCart('Ball', 79)">
+             Add to Cart
+            </button>
+        </div>
+        <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz39u3dC0Y0HK98QL2k3-pkraWuCVScvCjSmNrCA6AZQ&s=10"  >
+            <h3>Stumps</h3>
+            <p >₹229/pc</p>
+            <button onclick="addToCart('Stumps', 229)">
+                Add to Cart
+            </button>
+        </div>
+        <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4AKzkTBZ8m1DX_VJVK8KGeOfJ7qZZoikyoZtyB6evoQ&s=10https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4AKzkTBZ8m1DX_VJVK8KGeOfJ7qZZoikyoZtyB6evoQ&s=10"  >
+            <h3>Badminton</h3>
+            <p >₹670/2pc</p>
+            <button onclick="addToCart('Badminton',670 )">
+                Add to Cart
+            </button>
+        </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyTS5NKivWeCEGY29l0N1xSpP1JOcd3RTNL9AXN6bgKw&s=10"  >
+        <h3>Shuttle</h3>
+        <p >₹189/3pc</p>
+        <button onclick="addToCart('Shuttle', 189)">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9lK6MaL1X3pxPufB6lS-lPqjIRCxDK7pQBX3t6SISag&s=10"  >
+        <h3>Football</h3>
+        <p >₹359/pc</p>
+        <button onclick="addToCart('Football',359 )">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl-xvDracywc6K1lpIn3AfNVbNrGPWCOuYJIkcl2AjuQ&s=10"  >
+        <h3>Basketball</h3>
+        <p >₹649/pc</p>
+        <button onclick="addToCart('Basketball', 649)">
+             Add to Cart
+            </button>
+        </div>
+        <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxyh8tBs3SZYBloQqwXKzobl1xScbwXXr3yI2-rK8b9A&s=10"  >
+            <h3>Volleyball</h3>
+        <p >₹529/pc</p>
+            <button onclick="addToCart('Volleyball', 529)">
+                Add to Cart
+        </button>
+    </div>
+    
+    <div class="ay">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOUXheHKXv1GwVEtVZffXrnVpjzhlGwVAM7P4CEYbuTQ&s=10"  >
+        <h3>Boxing Gloves</h3>
+        <p >₹409/pc</p>
+       <button onclick="addToCart('Boxing Gloves',409 )">
+            Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEGxaT6UnlswyxHiU4qw4hPNXCFv0ggmEE3F9YvfQIaw&s=10"  >
+            <h3>Pump</h3>
+            <p >₹79/pc</p>
+           <button onclick="addToCart('Pump', 79)">
+                Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZe_Nvkon0cz4lJ3qf_PzIjkMehMRTIC6P6-aXYd7d1A&s=10"  >
+            <h3>Table Tennis Racket </h3>
+            <p >₹699/kit</p>
+            <button onclick="addToCart('Table Tennis Racket ',699 )">
+                Add to Cart
+        </button>
+    </div>
+    <div class="ay">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8G2TreDmX8nU2DLmccco6htG9ut_fGLk-BqIK9qzaiQ&s=10"  >
+            <h3>Carrom</h3>
+            <p >₹499/pc</p>
+            <button onclick="addToCart('Carrom',499 )">
+            Add to Cart
+        </button>
+    </div>
+    </div>
+<div>
+    
+ <p style="border: #16834a; font-size: xx-large;font-family:Arial, Helvetica, sans-serif; font-weight: bold;align-items:normal; text-decoration-color: aqua;" id="cart">🛒My Cart</p>
+
+    
+
+    <div id="cart-items"></div>
+
+    <h2 id="total">Total: ₹0</h2>
+</div>
+</div>
+</div>
+<div>
+<!-- <p style="border: #16834a; font-size: xx-large;font-family:Arial, Helvetica, sans-serif; font-weight: bold;align-items:normal; text-decoration-color: aqua;" id="contact">📞Contact</p> -->
+<center>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCKr0csET0Iv3MpFUSAPvxxKN_hV6_Jg5xLEDfMYZ0WA&s=10" height="100px" width="300px" id="contact">
+</center>
+<div class="categories">
+    <div class="ay">
+        <h3>☎️Call Us</h3>
+        <p>+91 94855 29515</p>
+    </div>
+     <div class="ay">
+        <h3>📩Email Us</h3>
+        <p>happyshop123@gmail.com</p>
+    </div>
+<div class="ay">
+        <h3>📍Location</h3>
+        <p>Phagwara, Punjab, India</p>
+    </div>
+<div class="ay">
+        <h3>🕰️Working Hours</h3>
+        <p>8am to 6pm </p>
+    </div>
+</div>
+<br>
+<br>
+<p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-weight: 900;font-size: 30px;" id="login">Login</p>
+<h2>Customer Registration</h2>
+<form>
+    <label >Name</label>
+     <input type="text" name="username" required><br><br>
+     <label >Number</label>
+     <input type="number" name="number" required><br><br>
+     <label>Gender</label>
+    <input type="radio" name="gender" value="Male" required>Male
+    <input type="radio" name="gender" value="Female" required>Female<br><br>
+     <label><span style="font-size: larger;">Address</span></label>
+    <textarea name="address" rows="3" cols="40" required></textarea>
+
+    <br><br>
+
+     <label>Email</label>
+     <input type="email" name="email" required><br><br>
+     <label>Feedback</label>
+     <input type="text" name="Feedback"><br><br>
+     <label>Rating</label>
+     <input type="radio" name="Rating" value="5">5
+     <input type="radio" name="Rating" value="4"> 4
+     <input type="radio" name="Rating" value="3">3
+     <input type="radio" name="Rating" value="2"> 2
+     <input type="radio" name="Rating" value="1"> 1<br><br>
+     
+     <input type="submit" value="Register">
+    <input type="reset" value="Clear">
+
+
+</div>
+</div>
+</header>
+    <script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function addToCart(name, price) {
+
+    let existingItem = cart.find(item => item.name === name);
+
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        cart.push({
+            name: name,
+            price: price,
+            quantity: 1
+        });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert(name + " added to cart!");
+
+
+function displayCart() {
+
+    let cartItems = document.getElementById("cart-items");
+    let total = 0;
+
+    cartItems.innerHTML = "";
+
+    cart.forEach((item, index) => {
+
+        let subtotal = item.price * item.quantity;
+        total += subtotal;
+
+        cartItems.innerHTML += `
+            <div class="cart-item">
+
+                <h3>${item.name}</h3>
+
+                <p>Price: ₹${item.price}</p>
+
+                <p>Quantity: ${item.quantity}</p>
+
+                <p>Subtotal: ₹${subtotal}</p>
+
+                <button class="remove-btn"
+                        data-index="${index}">
+                    Remove
+                </button>
+
+            </div>
+        `;
+    });
+
+    document.getElementById("total").innerText =
+        "Total: ₹" + total;
+
+    // Add click events to Remove buttons
+    document.querySelectorAll(".remove-btn").forEach(button => {
+
+        button.addEventListener("click", function() {
+
+            let index = Number(this.dataset.index);
+
+            cart.splice(index, 1);
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            displayCart();
+
+        });
+
+    });
+
+}
+
+
+
+function removeItem(index) {
+
+
+    cart.splice(index, 1);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+   
+    displayCart();
+}
+
+
+// Display previously added items when page loads
+displayCart();
+
+}
+
+</script>
+</body>
+</html>
