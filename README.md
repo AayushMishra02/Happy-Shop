@@ -103,5 +103,4 @@ Happy Shop provided us with an opportunity to apply our theoretical knowledge of
 **Project Type:** Online Shopping Website  
 **Technologies:** HTML, CSS, JavaScript  
 **Development Tool:** Visual Studio Code  
-**Repository:** Add your GitHub repository link here  
-**Live Website:** Add your GitHub Pages link here
+
